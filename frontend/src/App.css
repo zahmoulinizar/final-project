@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'open Sans' , sans-serif;
+
+}
+body{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:  #998c8c;
+  
+}
+.container{
+  position: relative;
+  width: 1100px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+
+}
+.container i:nth-child(1) {
+  border-radius: 43% 57% 74% 26% / 44% 30% 70% 56%;
+  animation: animate 6s linear infinite ;
+}
+.container i:nth-child(2) {
+  border-radius: 62% 38% 42% 58% / 51% 38% 62% 48%;
+  animation: animate 4s linear infinite ;
+}
+.container i:nth-child(3) {
+  border-radius: 44% 56% 42% 58% / 37% 65% 35% 63% ;
+  animation: animate2 10s linear infinite ;
+}
+@keyframes animate {
+  0%
+  {
+      transform: rotate(0deg);
+  }
+  100%
+  {
+      transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0%
+  {
+      transform: rotate(360deg);
+  }
+  100%
+  {
+      transform: rotate(0deg);
+  }
+}
+.container:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.container .login {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .login h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.container .login .inputBx {
+  position :relative ;
+  width: 100%;
+}
+.container .login .inputBx input{
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.container .login .inputBx input::placeholder{
+  color: rgba(255,255,255, 0.75);
+}
+.container .login .inputBx input[type ="submit"]{
+  background: linear-gradient(45deg,#ff357f,#fff172);
+  border: none;
+  cursor: pointer;
+
+}
+.container .login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  padding: 0 20px;
+
+}
+.container .login .links a {
+  color: #fff;
+  text-decoration: none;
+}
+.i3{
+  --clr:#fffd44;   
+}
+
+
+.i2{
+  --clr:#ff0057;   
+}
+
+.i1{
+  --clr:#00ff0a;   
+}
+
